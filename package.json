@@ -1,0 +1,41 @@
+{
+  "homepage": "http://reallogicse.github.io",
+  "name": "real-logic",
+  "version": "1.0.0",
+  "description": "Real Logics website",
+  "main": "gulpfile.babel.js",
+  "author": "Martin Pring",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "6.26.0",
+    "browser-sync": "2.26.14",
+    "cross-env": "7.0.3",
+    "cross-spawn": "7.0.3",
+    "cssnano": "4.1.10",
+    "gh-pages": "^3.1.0",
+    "gulp": "4.0.2",
+    "gulp-postcss": "9.0.0",
+    "postcss": "8.2.8",
+    "postcss-import": "14.0.0",
+    "tailwindcss": "2.0.4"
+  },
+  "scripts": {
+    "build:production": "cross-env NODE_ENV=production gulp",
+    "build:dev": "cross-env NODE_ENV=development gulp",
+    "build": "npm run build:production",
+    "dev": "cross-env NODE_ENV=development gulp serve",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reallogicse/reallogicse.github.io.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2"
+  }
+}

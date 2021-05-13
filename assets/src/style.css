@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Added manually */
+.bg-clip-text {
+    -webkit-background-clip: text;
+}
+
+/* .dev-screen {
+    background-image: url('/assets/images/dev_screen.jpg');
+    object-fit: cover;
+} */
+
+html {
+    scroll-behavior: smooth;
+}
