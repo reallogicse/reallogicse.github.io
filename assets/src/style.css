@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Added manually */
+.bg-clip-text {
+    -webkit-background-clip: text;
+}
+
+/* .dev-screen {
+    background-image: url('/assets/images/dev_screen.jpg');
+    object-fit: cover;
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+  
+  .sticky + main {
+    padding-top: 96px;
+  }
