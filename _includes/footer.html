@@ -3,7 +3,7 @@
                     <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                 
                         <div class="px-5 py-2">
-                            <a href="#header" class="text-base text-gray-400 hover:text-gray-300">
+                            <a href="#about" class="text-base text-gray-400 hover:text-gray-300">
                                 Om
                             </a>
                         </div>
@@ -41,7 +41,7 @@
                     </nav>
                     <div class="mt-8 flex justify-center space-x-6">
                 
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <a href="https://www.facebook.com/reallogicse" class="text-gray-400 hover:text-gray-300">
                             <span class="sr-only">Facebook</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -50,7 +50,7 @@
                             </svg>
                         </a>
                 
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <a href="https://www.instagram.com/reallogicse" class="text-gray-400 hover:text-gray-300">
                             <span class="sr-only">Instagram</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -59,7 +59,7 @@
                             </svg>
                         </a>
                 
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <a href="https://twitter.com/reallogicse" class="text-gray-400 hover:text-gray-300">
                             <span class="sr-only">Twitter</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
@@ -68,7 +68,7 @@
                             </svg>
                         </a>
                 
-                        <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <a href="https://github.com/reallogicse" class="text-gray-400 hover:text-gray-300">
                             <span class="sr-only">GitHub</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -83,16 +83,7 @@
                     </p>
                 </div>
 
-
-
-
-
-
-
             </footer>
-
-
-
 
         </div> <!-- closing 'real-logic-body' -->
     </div> <!-- closing 'real-logic-inner-body' -->
@@ -146,25 +137,28 @@
                 // If click outside menu but not a link and span width texts 'Finns något för dig?' and 'Lediga tjänster'
                 if(
                     elType !== 'a' && 
-                    event.target.innerHTML !== 'Finns något för dig?' && 
-                    event.target.innerHTML !== 'Lediga tjänster'
+                    event.target.innerHTML !== 'Bli en del av vårt team' && 
+                    event.target.innerHTML !== 'Är du redo för en ny utmaning?'
                 ) {
                     toggle();
                 }
             }
         });
 
-        function reportWindowSize() {
-            console.log(window.innerHeight);
-            console.log(window.innerWidth);
+        // Stick menu on scroll
+        window.onscroll = function() {onScroll()};
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function onScroll() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
         }
-
-        window.onresize = reportWindowSize;
-        // console.log(window.screen.availWidth);
-
-        // if(window.screen.availWidth ) {
-
-        // }
+        
 
     </script>
 

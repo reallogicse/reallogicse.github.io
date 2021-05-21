@@ -51,6 +51,13 @@ task("processImages", () => {
     .pipe(dest(POST_BUILD_ASSETS));
 });
 
+task("processImages", () => {
+  browserSync.notify("Add CNAME to root...");
+
+  return src('assets/images/')
+    .pipe(dest(SITE_ROOT));
+});
+
 task("startServer", () => {
   browserSync.init({
     files: [SITE_ROOT + "/**"],

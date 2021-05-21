@@ -21,6 +21,8 @@
     "tailwindcss": "2.0.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d _site",
     "build:production": "cross-env NODE_ENV=production gulp",
     "build:dev": "cross-env NODE_ENV=development gulp",
     "build": "npm run build:production",

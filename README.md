@@ -36,6 +36,8 @@ A starter kit for using [Tailwind](https://tailwindcss.com) with [Jekyll](https:
 * `npm run build:dev` to compile the site with development settings
 * `npm run build:production` or `npm run build` to compile the site for production
 
+## Deploy your site to GitHub
+* `npm run deploy` this will build and deploy your site to you github repo
 
 ## Deploy
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/jekyll-starter-tailwind)
